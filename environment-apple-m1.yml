@@ -1,0 +1,22 @@
+name: ods.ai-mlops2.0
+
+channels:
+  - apple
+  - conda-forge
+
+dependencies:
+  - python=3.10
+  - apple::tensorflow-deps
+  - matplotlib
+  - pip
+  - pip:
+      - tensorflow-macos
+      - tensorflow-metal
+      - tensorflow_datasets
+      - black
+      - flake8
+      - bandit
+      - mypy
+      - pylint
+      - pre-commit
+      - opencv-python
