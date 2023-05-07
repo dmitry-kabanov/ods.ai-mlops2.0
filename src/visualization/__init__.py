@@ -2,13 +2,9 @@ import os
 
 import matplotlib.pyplot as plt
 
-from .visualize import (
-    draw_bounding_box_on_image,
-    draw_bounding_boxes_on_image,
-    draw_bounding_boxes_on_image_array,
-    display_digits_with_boxes,
-    plot_metrics,
-)
+from .visualize import (display_digits_with_boxes, draw_bounding_box_on_image,
+                        draw_bounding_boxes_on_image,
+                        draw_bounding_boxes_on_image_array, plot_metrics)
 
 __all__ = [
     "draw_bounding_box_on_image",

@@ -1,12 +1,13 @@
-import numpy as np
-import click
 import logging
+
+import click
+import numpy as np
 import tensorflow as tf
+
+from src.data.preprocessing import dataset_to_numpy_with_original_bboxes_util
 from src.models.build_model import build_and_compile_model_mobilenetv2
 from src.models.evaluate import intersection_over_union
-from src.visualization import plot_metrics
-from src.data.preprocessing import dataset_to_numpy_with_original_bboxes_util
-from src.visualization import display_digits_with_boxes
+from src.visualization import display_digits_with_boxes, plot_metrics
 
 EPOCHS = 50
 
@@ -91,7 +92,8 @@ def main(
     ) = dataset_to_numpy_with_original_bboxes_util(visualization_val_ds, N=500)
     predicted_bboxes = model.predict(normalized_images, batch_size=32)
 
-    # Calculates IOU and reports true positives and false positives based on IOU threshold
+    # Calculates IOU and reports true positives and false positives
+    # based on IOU threshold.
     iou = intersection_over_union(predicted_bboxes, normalized_bboxes)
     iou_threshold = 0.5
 

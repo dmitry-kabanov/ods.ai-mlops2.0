@@ -1,8 +1,6 @@
-import os
-
+import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-import cv2
 
 
 def draw_bounding_box_on_image(
@@ -106,7 +104,7 @@ def display_digits_with_boxes(
 
         if len(bboxes) > i:
             bbox = bboxes[i]
-            if bboxes_normalized == True:
+            if bboxes_normalized is True:
                 bbox = [
                     bbox[0] * images[i].shape[1],
                     bbox[1] * images[i].shape[0],

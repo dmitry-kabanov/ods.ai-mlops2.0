@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
-import os
-import click
 import logging
+import os
 from pathlib import Path
-from dotenv import find_dotenv, load_dotenv
+
+import click
 import tensorflow as tf
 import tensorflow_datasets as tfds
-from src.data.preprocessing import read_image_tfds_with_original_bbox
-from src.data.preprocessing import read_image_tfds
+from dotenv import find_dotenv, load_dotenv
+
+from src.data.preprocessing import (read_image_tfds,
+                                    read_image_tfds_with_original_bbox)
 
 
 @click.command()
