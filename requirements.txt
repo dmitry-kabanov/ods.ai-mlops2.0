@@ -2,13 +2,9 @@
 -e .
 
 # external requirements
-#click
-#Sphinx
-#coverage
-#awscli
-flake8
-pylint
-black
-mypy
-bandit
+click
+opencv-python
+tensorflow
+tensorflow_datasets
+matplotlib
 python-dotenv>=0.5.1
