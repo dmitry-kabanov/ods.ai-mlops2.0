@@ -29,10 +29,23 @@ before_script:
     - virtualenv venv
     - source venv/bin/activate
 
-lint:
+stages:
+    - build
+    - lint
+
+build:
+    stage: build
     script:
         - pip install -r requirements-dev.txt
+
+lint:
+    stage: lint
+    script:
         - flake8 .
+        - mypy src
+
+formatting:
+    stage: lint
+    script:
         - black .
         - isort .
-        - mypy src
