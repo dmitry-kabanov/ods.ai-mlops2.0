@@ -7,6 +7,7 @@ dependencies:
     - python=3.10
     - apple::tensorflow-deps
     - matplotlib
+    - bioconda::snakemake
     - pip
     - pip:
           - tensorflow-macos
