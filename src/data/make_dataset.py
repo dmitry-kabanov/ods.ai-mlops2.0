@@ -8,8 +8,7 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 from dotenv import find_dotenv, load_dotenv
 
-from src.data.preprocessing import (read_image_tfds,
-                                    read_image_tfds_with_original_bbox)
+from src.data.preprocessing import read_image_tfds, read_image_tfds_with_original_bbox
 
 
 @click.command()

@@ -47,5 +47,5 @@ lint:
 formatting:
     stage: lint
     script:
-        - black .
-        - isort .
+        - black --check .
+        - isort --check .
