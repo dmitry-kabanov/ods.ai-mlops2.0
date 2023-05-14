@@ -21,3 +21,4 @@ dependencies:
           - pre-commit
           - opencv-python
           - python-dotenv
+          - dvc[s3]

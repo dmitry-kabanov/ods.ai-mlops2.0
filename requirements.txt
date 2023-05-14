@@ -8,3 +8,4 @@ tensorflow
 tensorflow_datasets
 matplotlib
 python-dotenv>=0.5.1
+dvc[s3]
